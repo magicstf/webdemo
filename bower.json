@@ -1,0 +1,21 @@
+{
+  "name": "webdemo",
+  "description": "前端项目开发架构",
+  "main": "gulpfile.js",
+  "authors": [
+    "stf"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/magicstf/webdemo",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "Swiper": "swiper#~3.3.0"
+  }
+}

@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>webdemo</title>
+    <link rel="stylesheet" href="../dest/css/swiper.min.css?rev=@@hash">
+    <link rel="stylesheet" href="../dest/css/index.min.css?rev=@@hash">
 </head>
 <body>
-
+<!--swiper容器 start-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide red-slide">
+                <p>搜</p><p>狐</p><p>视</p><p>屏</p>
+                <p>什么时候！</p>
+                <div>hello world! hello my friends！</div>
+            </div>
+            <div class="swiper-slide blue-slide">slider2</div>
+            <div class="swiper-slide orange-slide">slider3</div>
+        </div>
+    </div>
+<!--swiper容器 end-->
+<script src="../dest/js/main.min.js?rev=@@hash"></script>
+<script>
+    var myswiper = new Swiper('.swiper-container',{
+        direction:'vertical',
+        loop:false
+    })
+</script>
 </body>
 </html>

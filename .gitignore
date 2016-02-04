@@ -1,9 +1,8 @@
 /bower_components
 /node_modules
-/dest
 /test
 /docs
 .DS_Store
 .idea
-.idea/*
+.idea/**
 

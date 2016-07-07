@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>webdemo</title>
-    <link rel="stylesheet" href="../dest/css/swiper.min.css?rev=@@hash">
-    <link rel="stylesheet" href="../dest/css/index.min.css?rev=@@hash">
+    <!--build:js js/main.min.js-->
+    <script src="js/angular.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.jquery.js"></script>
+    <!--/build-->
+
+    <!--build:css css/main.min.css-->
+    <link rel="stylesheet" type="text/css" href="less/index.less">
+    <link rel="stylesheet" type="text/css" href="less/swiper.css">
+    <!--/build-->
 </head>
-<body>
+<body ng-controller="PhoneListCtrl">
 <!--swiper容器 start-->
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide red-slide">
-                <p>搜</p><p>狐</p><p>视</p><p>屏</p>
-                <p>什么时候！</p>
-                <div>hello world! hello my friends！</div>
+            your name:<input type="text" ng-model="yourname" placeholder="world">
+            <hr>
+            hello {{yourname||'world'}}
             </div>
-            <div class="swiper-slide blue-slide">slider2</div>
-            <div class="swiper-slide orange-slide">slider3</div>
         </div>
     </div>
 <!--swiper容器 end-->
-<script src="../dest/js/main.min.js?rev=@@hash"></script>
+
 <script>
     var myswiper = new Swiper('.swiper-container',{
         direction:'vertical',

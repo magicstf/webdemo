@@ -20,6 +20,7 @@ var gulp = require('gulp'),//基础库
     revCollector = require('gulp-rev-collector'); // 将文件替换为MD5版本的文件
     processhtml = require('gulp-processhtml');
     livereload = require('gulp-livereload'); //自动刷新
+    babel = require('gulp-babel');
     //sass = require('gulp-ruby-sass'),//sass
     //产出路径
     var destPath = {
@@ -80,6 +81,9 @@ var gulp = require('gulp'),//基础库
     //线上脚本处理
     gulp.task('jsProd',['cleanJs'],function(){
         return gulp.src(srcPath.js)
+            .pipe(babel({
+                presets: ['es2015']
+            }))
             .pipe(plumber({errorHandler:notify.onError('Error:<%= error.message %>')}))
             .pipe(jshint({'expr':true}))
             .pipe(jshint.reporter('default')) // 对代码进行报错提示
@@ -101,6 +105,9 @@ var gulp = require('gulp'),//基础库
     //开发脚本处理
     gulp.task('jsDev',['cleanJs'],function(){
         return gulp.src(srcPath.js)
+            .pipe(babel({
+                presets: ['es2015']
+            }))
             .pipe(plumber({errorHandler:notify.onError('Error:<%= error.message %>')}))
             .pipe(jshint({'expr':true}))
             .pipe(jshint.reporter('default')) // 对代码进行报错提示

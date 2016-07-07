@@ -1,13 +1,6 @@
 /**
  * Created by tengfeisu on 2016/2/3.
  */
-(function(){
-    var a=3;
-    var b=4;
-    if(a==b){
-        console.log('hello world!')
-    }
-    else {
-        console.log('hello gulp!')
-    }
-})();
+'use strict'
+var arr = [4,3,1,6,2,4,2,66,12,43,12];
+[...new Set(arr)];
